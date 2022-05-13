@@ -4,7 +4,7 @@ const isPrime = require('../util/isPrime');
 const router = express.Router();
 
 /**
- * GET /api/checkPrime
+ * GET /api/checkPrime?number=1
  */
 router.get(
   '/',
