@@ -7,9 +7,12 @@ const router = express.Router();
  *
  * @param {number} n Number to check if prime
  * @returns Boolean value for whether the number is prime
+ * @example
+ * isPrime(2); // true
+ * isPrime(10); // false
  */
 const isPrime = (n) => {
-  if (n < 2) {
+  if (n < 2 || n === undefined) {
     return false;
   }
 
@@ -22,16 +25,16 @@ const isPrime = (n) => {
 };
 
 /**
- * POST /api/isPrime
+ * GET /api/isPrime
  */
-router.post(
+router.get(
   '/',
   (req, res) => {
-    const { number } = req.body;
-    const numberIsPrime = isPrime(number);
-    res.json({ numberIsPrime });
+    const { number } = req.query;
+    const parsedNumber = parseInt(number.toString(), 10);
+
+    res.json({ isPrime: isPrime(parsedNumber) });
   },
-  // res.json({ isPrime: isPrime(number) });
 );
 
 module.exports = router;
