@@ -41,7 +41,7 @@ Let there be dependencies.
 
 ### 4. The server is up.
 
-It's in localhost:3000
+It's in localhost:3001
 
 ### 5. (Optional) Head into frontend project and follow more steps
 
