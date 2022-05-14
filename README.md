@@ -45,7 +45,7 @@ It's in localhost:3000
 
 ### 5. (Optional) Head into frontend project and follow more steps
 
-It's fun.
+It's fun. [Click here](https://github.com/p4nu/prime-checker-front)
 
 ## How would you host this in Azure?
 
